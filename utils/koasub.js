@@ -3,23 +3,25 @@
 const XLSX = require('xlsx');
 const data = 'a,b,c\n1,2,3'.split('\n').map(x => x.split(','));
 /* eslint-disable no-undef */
-process.on('message', ([ m, data ] = _) => {
-  /* eslint-disable indent */
-  switch (m) {
-    case 'load data':
-      load_data(data);
-      break;
-    case 'get data':
-      get_data(data);
-      break;
-    case 'get file':
-      get_file(data);
-      break;
-    default:
-      throw m;
+process.on('message', paylaod => {
+  if (Array.isArray(paylaod)) {
+    const m = paylaod[0];
+    const data = paylaod[1];
+    switch (m) {
+      case 'load data':
+        load_data(data);
+        break;
+      case 'get data':
+        get_data(data);
+        break;
+      case 'get file':
+        get_file(data);
+        break;
+      default:
+        throw m;
+    }
   }
 });
-
 function load_data(file) {
   const wb = XLSX.readFile(file);
   /* generate array of arrays */

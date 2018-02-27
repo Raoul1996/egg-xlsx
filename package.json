@@ -1,6 +1,6 @@
 {
   "name": "egg-xlsx",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "",
   "eggPlugin": {
     "name": "xlsx"
@@ -11,6 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
+    "formidable": "^1.1.1",
     "printj": "^1.1.2",
     "xlsx": "^0.12.2"
   },
