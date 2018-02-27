@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-xlsx.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-xlsx
 
-<!--
-Description here.
--->
+> read the excel file content plugin for egg framework, based on [js-xlsx](https://github.com/SheetJS/js-xlsx)
 
 ## Install
 
@@ -52,6 +50,22 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Example
 
+### Upload the xlsx file and get the content
+
+```js
+// {app_root}/app/controller/xlsx.js
+const Contrller = require('egg').Controller
+
+class XlsxController extends Contrller {
+  async index() {
+    const {ctx, app} = this
+    const res = await app.xlsx.analysis(ctx)
+    ctx.body = res
+  }
+}
+module.exports = XlsxController
+```
+### More function
 <!-- example here -->
 
 ## Questions & Suggestions

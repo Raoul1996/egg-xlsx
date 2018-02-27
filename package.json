@@ -1,7 +1,7 @@
 {
   "name": "egg-xlsx",
-  "version": "0.0.4",
-  "description": "",
+  "version": "0.1.0",
+  "description": "read the excel file content plugin for egg framework, based on js-xlsx",
   "eggPlugin": {
     "name": "xlsx"
   },
