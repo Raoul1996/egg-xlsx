@@ -11,7 +11,7 @@
     "egg-plugin"
   ],
   "dependencies": {
-    "formidable": "^1.1.1",
+    "formidable": "^3.2.4",
     "printj": "^1.1.2",
     "xlsx": "^0.12.2"
   },
